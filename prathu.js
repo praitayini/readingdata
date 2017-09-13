@@ -1,5 +1,5 @@
 document.write(5+6);
-/*jQuery.getJSON('https://health.data.ny.gov/resource/5q8c-d6xq.json')
+//jQuery.getJSON('https://health.data.ny.gov/resource/5q8c-d6xq.json')
  function(x){
                 listCancers.dt={study:{}}
                 var div = document.getElementById(id)
@@ -10,7 +10,7 @@ document.write(5+6);
                    listCancers.dt.study[xi.id]={name:xi.name,info:xi.info}
                    h +='<li id="'+xi.id+'">'+xi.id+': '+xi.name+'</li>'
                    return xi                   
-                })*/
+                })
    
    getSParcs2014=function(n){
     if(!n){n=1000}
