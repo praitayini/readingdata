@@ -1,5 +1,5 @@
 document.write(5+6);
-//jQuery.getJSON("https://health.data.ny.gov/resource/5q8c-d6xq.json",function( data ) {
+/*jQuery.getJSON("https://health.data.ny.gov/resource/5q8c-d6xq.json",function( data ) {
   var items = [];
   $.each( data, function( key, val ) {
     items.push( "<li id='" + key + "'>" + val + "</li>" );
@@ -12,7 +12,7 @@ document.write(5+6);
     $.getJSON('https://health.data.ny.gov/resource/pzzw-8zdv.json?$limit='+n)
        .then(function(data){
              debugger
-      })
+      })*/
     
-}
+
    document.write(5+7);
