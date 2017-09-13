@@ -5,4 +5,4 @@ jQuery.getJSON('https://health.data.ny.gov/resource/5q8c-d6xq.json', function(da
     items.push( "<li id='" + key + "'>" + val + "</li>" );
   });
 document.write(5+7);
-document.write(items.id[0]);  
+document.write(items);  
