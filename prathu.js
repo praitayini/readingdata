@@ -1,5 +1,5 @@
 document.write(5+6);
-jQuery.getJSON('https://health.data.ny.gov/resource/5q8c-d6xq.json')
+//jQuery.getJSON('https://health.data.ny.gov/resource/5q8c-d6xq.json')
  function(x){
                 listHealth.dt={study:{}}
                 var div = document.getElementById(id)
