@@ -10,7 +10,7 @@ jQuery.getJSON("https://health.data.ny.gov/resource/5q8c-d6xq.json",function( da
    getSParcs2014=function(n){
     if(!n){n=1000}
     $.getJSON('https://health.data.ny.gov/resource/pzzw-8zdv.json?$limit='+n)
-       .then(function(x){
+       .then(function(data){
              debugger
       })
     
