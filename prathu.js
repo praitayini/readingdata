@@ -35,7 +35,7 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
     var trace1 = {
       x: pqi_name,
       y: y1,
-      name: 'Observed Rate (per 1,000 people)',
+      name: 'Observed Rate (per 100,000 people)',
       marker: {color: 'rgb(55, 83, 109)'},
       type: 'bar'
     };
@@ -51,10 +51,10 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
     var data = [trace1, trace2];
 
     var layout = {
-      title: 'Health data',
+      title: 'Health data in 2015',
       xaxis: {tickfont: {
-          size: 14,
-          color: 'rgb(107, 107, 107)'
+          //size: 14,
+          //color: 'rgb(107, 107, 107)'
         }},
       yaxis: {
         title: '',
@@ -74,8 +74,8 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
         bordercolor: 'rgba(255, 255, 255, 0)'
       },
       barmode: 'group',
-      bargap: 0.15,
-      bargroupgap: 0.1
+      bargap: 0.3,
+      bargroupgap: 0.2
     };
 
     Plotly.newPlot('myDiv', data, layout);
