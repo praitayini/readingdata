@@ -53,8 +53,8 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
     var layout = {
       title: 'Health data in 2015',
       xaxis: {tickfont: {
-          //size: 14,
-          //color: 'rgb(107, 107, 107)'
+          size: 14,
+          color: 'rgb(107, 107, 107)'
         }},
       yaxis: {
         title: '',
@@ -75,7 +75,7 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
       },
       barmode: 'group',
       bargap: 0.15,
-      bargroupgap: 0.2
+      bargroupgap: 0.1
     };
 
     Plotly.newPlot('myDiv', data, layout);
