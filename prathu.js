@@ -20,16 +20,16 @@ jQuery.getJSON('https://health.data.ny.gov/resource/5q8c-d6xq.json')
 
 Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json', 
   function(items){
-	  var index;
-	  var pqi_name= [];
-	  var y1  = [];
-	  var y2  = [];
+ var index;
+ var pqi_name= [];
+ var y1  = [];
+ var y2  = [];
     
-	  for	(index = 0; index < items.length; index++) {
-	  	pqi_name.push(items[index].pqi_name);
-	  	y1.push(items[index].observed_rate_per_100_000_people);
-	  	y2.push(items[index].expected_rate_per_100_000_people);
-	  }
+ for	(index = 0; index < items.length; index++) {
+ 	pqi_name.push(items[index].pqi_name);
+ 	y1.push(items[index].observed_rate_per_100_000_people);
+ 	y2.push(items[index].expected_rate_per_100_000_people);
+ }
     
 
     var trace1 = {
@@ -46,38 +46,40 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
       name: 'Expected Rate (per 100,000 people)',
       marker: {color: 'rgb(26, 118, 255)'},
       type: 'bar'
-
     };
 
-    var layout = {
-    title: 'Health data in 2015',
-    xaxis: {tickfont: {
-    size: 14,
-    color: 'rgb(107, 107, 107)'
-    }},
-    yaxis: {
-    title: '',
-    titlefont: {
-    size: 16,
-    color: 'rgb(107, 107, 107)'
-    },
-    tickfont: {
-    size: 14,
-    color: 'rgb(107, 107, 107)'
-    }
-  },
-    legend: {
-    x: 0,
-    y: 1.0,
-    bgcolor: 'rgba(255, 255, 255, 0)',
-    bordercolor: 'rgba(255, 255, 255, 0)'
-  },
-  barmode: 'group',
-  bargap: 0.15,
-  bargroupgap: 0.1
-};
+    var data = [trace1, trace2];
 
-Plotly.newPlot('myDiv', data, layout);
-  }
-  );  
+    var layout = {
+      title: 'Health data in 2015',
+      xaxis: {tickfont: {
+          //size: 14,
+          //color: 'rgb(107, 107, 107)'
+        }},
+      yaxis: {
+        title: '',
+        titlefont: {
+          size: 16,
+          color: 'rgb(107, 107, 107)'
+        },
+        tickfont: {
+          size: 14,
+          color: 'rgb(107, 107, 107)'
+        }
+      },
+      legend: {
+        x: 0,
+        y: 1.0,
+        bgcolor: 'rgba(255, 255, 255, 0)',
+        bordercolor: 'rgba(255, 255, 255, 0)'
+      },
+      barmode: 'group',
+      bargap: 0.15,
+      bargroupgap: 0.2
+    };
+
+    Plotly.newPlot('myDiv', data, layout);
+
+    }
+); 
     
