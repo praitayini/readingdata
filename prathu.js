@@ -20,3 +20,4 @@ jQuery.getJSON('https://health.data.ny.gov/resource/5q8c-d6xq.json')
     var data = [{ x: ['giraffes','tigers','monkeys'], y: [20, 12, 32], type: 'bar'}];
     Plotly.newPlot('myDiv', data);
     
+    
