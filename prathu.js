@@ -74,7 +74,7 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
         bordercolor: 'rgba(255, 255, 255, 0)'
       },
       barmode: 'group',
-      bargap: 0.3,
+      bargap: 0.15,
       bargroupgap: 0.2
     };
 
