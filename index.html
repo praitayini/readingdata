@@ -1,14 +1,21 @@
 <html>
     <head>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script type="text/javascript"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
     </head>
     <body>
-        <h2 style="color:black">Load Health Data</h2>
+        <h2 style="color:black">Health Data</h2>
         <div id="work" style="color:red">loading data ...</div>
         <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
         <script src='prathu.js'></script>
+        <hr />
+        Choose Zipcode:
+        <select id="slct1" name="slct1">
+          <option value="10001">10001</option>
+          <option value="10002">10002</option>
+          </select>
     </body>
 </html>
 
