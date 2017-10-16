@@ -22,25 +22,15 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
   function(items){
  var index;
  var pqi_name= [];
- var patient_zipcode=[];
  var y1  = [];
  var y2  = [];
     
- for(index = 0; index < items.length; index++) {
+ for	(index = 0; index < items.length; index++) {
  	pqi_name.push(items[index].pqi_name);
  	y1.push(items[index].observed_rate_per_100_000_people);
  	y2.push(items[index].expected_rate_per_100_000_people);
  }
- function getPatientZipCode(chosenZipcode){
-  for(index = 0; index < items.length; index++)
-   if (items[index] == chosenZipcode){
-     patient_zipcode.push(items[index].patient_zipcode);
-   }
-  }
- setBarPlot('10001');
-
- function setBarPlot(chosenZipcode){
-   getPatientZipCode(chosenZipcode);
+    
 
     var trace1 = {
       x: pqi_name,
@@ -57,7 +47,7 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
       marker: {color: 'rgb(26, 118, 255)'},
       type: 'bar'
     };
- }
+
     var data = [trace1, trace2];
 
     var layout = {
@@ -87,27 +77,10 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
       bargap: 0.15,
       bargroupgap: 0.1
     };
- 
-    Plotly.newPlot('plot', data, layout);
-  }
-  );  
-var innerContainer = document.querySelector('[data-num="0"'),
-    plotEl = innerContainer.querySelector('.plot'),
-    countrySelector = innerContainer.querySelector('.patient_zipcode');
 
-function assignOptions(textArray, selector) {
-  for (var i = 0; i < textArray.length;  i++) {
-      var currentOption = document.createElement('option');
-      currentOption.text = textArray[i];
-      selector.appendChild(currentOption);
-  }
-}
+    Plotly.newPlot('myDiv', data, layout);
+    
 
-assignOptions(items, zipcodeSelector);
-
-function updateZipcode(){
-    setBarPlot(countrySelector.value);
-}
-  
-zipcodeSelector.addEventListener('change', updateZipcode, false)
+    }
+); 
 
