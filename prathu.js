@@ -36,7 +36,9 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
    if (items[index] == chosenZipcode){
      patient_zipcode.push(items[index].patient_zipcode);
    }
- }
+  }
+ setBarPlot('10001');
+
  function setBarPlot(chosenZipcode){
    getPatientZipCode(chosenZipcode);
 
@@ -86,13 +88,12 @@ Plotly.d3.json('https://health.data.ny.gov/resource/5q8c-d6xq.json',
       bargroupgap: 0.1
     };
  
-    Plotly.newPlot('myDiv', data, layout);
+    Plotly.newPlot('plot', data, layout);
   }
-  );
-
-  var innerContainer = document.querySelector('[data-num="0"'),
+  );  
+var innerContainer = document.querySelector('[data-num="0"'),
     plotEl = innerContainer.querySelector('.plot'),
-    countrySelector = innerContainer.querySelector('.countrydata');
+    countrySelector = innerContainer.querySelector('.patient_zipcode');
 
 function assignOptions(textArray, selector) {
   for (var i = 0; i < textArray.length;  i++) {
@@ -102,13 +103,11 @@ function assignOptions(textArray, selector) {
   }
 }
 
-assignOptions(listofCountries, countrySelector);
+assignOptions(items, zipcodeSelector);
 
-function updateCountry(){
-    setBubblePlot(countrySelector.value);
+function updateZipcode(){
+    setBarPlot(countrySelector.value);
 }
   
-countrySelector.addEventListener('change', updateCountry, false);
-});
- 
-    
+zipcodeSelector.addEventListener('change', updateZipcode, false)
+
