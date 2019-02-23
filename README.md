@@ -2,4 +2,5 @@
 
 live at https://praitayini.github.io/readingdata
 
-The data from https://health.data.ny.gov/ can we visualized here.
+The data is taken from https://health.data.ny.gov/ 
+The data is read from an open source database and visaulized 
